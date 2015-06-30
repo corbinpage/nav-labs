@@ -3,7 +3,7 @@
   new WOW().init();
 
   $("#modal-email-button").click(function() {
-    var url = "https://github.com/repos/corbinpage/nav-labs/issues";
+    var url = "https://api.github.com/repos/corbinpage/nav-labs/issues";
     data = {
       "title": "Contact via Website Form",
       "assignee": "corbinpage",
@@ -17,6 +17,7 @@
         console.log("data");
       }
     });
+
   })  
 
 
