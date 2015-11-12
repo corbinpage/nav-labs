@@ -1,5 +1,0 @@
-(function () {
-
-  new WOW().init();
-
-})();
