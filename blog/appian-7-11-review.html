@@ -25,14 +25,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand text-danger" href="#">Navigator Labs</a>
+        <a class="navbar-brand text-danger" href="../index.html">Navigator Labs</a>
       </div>
       <div class="navbar-collapse collapse" id="navbar-collapsible">
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="#section1">Home</a></li>
-          <li><a href="#section2">Services</a></li>
-          <li><a href="#section3">Clients</a></li>
-          <li><a href="#section4">Community</a></li>
+          <li><a href="../index.html#section1">Home</a></li>
+          <li><a href="../index.html#section2">Services</a></li>
+          <li><a href="../index.html#section3">Clients</a></li>
+          <li><a href="../index.html#section4">Community</a></li>
           <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
           <li>&nbsp;</li>
         </ul>
@@ -43,98 +43,137 @@
     </div>
   </nav>
 
-    <section class="container-fluid" id="section4">
-    <h1 class="text-center">Community</h1>
-      <div class="container v-center">
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-2 column">
-          </div>
-          <div class="col-xs-6 col-md-4 column">
-            <h2>Blog</h2>
-            <ul class="nav">
-              <li class="community-items"><a href="blog/appian-7-11-review.html" target="_blank">Appian 7.11 Review</a></li>
-              <li class="community-items"><a href="blog/appian-7-10-review.html" target="_blank">Appian 7.10 Review</a></li>
-              <li class="community-items"><a href="blog/appian-7-9-review.html" target="_blank">Appian 7.9 Review</a></li>
-            </ul>
-          </div>
-          <div class="col-xs-6 col-md-4 column">
-            <h2>Add Ons</h2>
-            <ul class="nav">
-              <li class="community-items"><a href="http://www.appian.com/appmarket/component/task-metric-utilities/" target="_blank">Task Metric Utilities in App Market</a></li>
-              <li class="community-items"><a href="http://corbinpage.github.io/appian-zip-diff/" target="_blank">AppianZipDiff</a></li>
-            </ul>
+  <!-- Changes needed -->
+  <!-- <title> -->
+  <!-- <h1> -->
+  <!-- <p> -->
+
+  <section class="container-fluid" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 column">
+        </div>
+        <div class="col-sm-11 col-md-8 column">
+          <h1>Appian 7.11 Review</h1>
+          <h4>Corbin Page</h4>
+          <p>Nov. 11, 2015</p>
+          <div class="blog-content">
+            <p>Appian 7.11 was released last month and had plenty of exciting updates! All details can be found in the <a href="https://forum.appian.com/suite/help/7.11/Appian_Release_Notes.html" target="_blank">release notes</a>, and I've reviewed my favorite features below.</p>
+            <h2>User-facing features</h2>
+            <p><strong><span style="text-decoration: underline;">Kudos view</span></strong> - For a while, kudos was a half-baked feature meant to compete with Yammer/Chatter back when enterprise social was hot. Appian finally rounded out the feature, and I now feel comfortable recommending it to clients. That said, I'm not convinced it'll save the News tab, which still sees poor usage numbers.</p>
+
+            <p><strong><span style="text-decoration: underline;">Automatic focus</span></strong> - Appian has always been a "click heavy" product from the Tempo interface to the Designer experience. Providing autofocus on the first component and turning it on by default suggests that clicks may finally be on the decline. I also hope that configurable lazy form submission (pressing &lt;enter&gt;) is also on the horizon.</p>
+
+            <p><strong><span style="text-decoration: underline;">User filters are now expressionable</span></strong> - Another long overdue feature. Hardcoding important attributes for filters on your main records was a real buzzkill. I suspect that the SAIL performance improvements in recent releases paved the way for this feature.</p>
+
+            <p><strong><span style="text-decoration: underline;">Embedded Actions</span></strong> - Actions join tasks and related actions as embeddable features. I love how the embeddable components have been rolled out and can't wait to see more interesting use cases. I hope Sites are embeddable next..</p>
+            <h2>Sail Changes</h2>
+            <p><strong><span style="text-decoration: underline;">Initially Collapsed Sections</span></strong> - Sections can now be collapsed by default, making large forms much more manageable. Clients tend to want to see ALL DATA, ALL THE TIME without having to navigate to a record separately. Initially collapsed sections will be a great way to fulfill their requests while keeping interfaces manageable.</p>
+            <p><strong><span style="text-decoration: underline;">Tool tips &amp; Placeholder text</span><em> </em></strong><em>- </em>These two features to provide context about specific fields and components without the additional screen clutter of <em>instructions.</em> Context is most useful the first or first few times a user encounters a screen and becomes less relevant over time. I prefer tool tips and placeholder text because they blend into the screen over time rather than displaying even more text for your users to consume.</p>
+
+            <p><strong><span style="text-decoration: underline;">Links in Pickers and Milestone bar</span></strong> - Great additions to make make SAIL interfaces even more interactive. I'm particularly excited about using a!submitLink() inside milestone bars to provide "jump to a step" functionality within a wizard.</p>
+
+            <p><strong><span style="text-decoration: underline;">Barcode component on iOS using Verifone</span></strong> - Although the feature is rather limited right now, I'm excited to see Appian move further into the physical world and the impact on manufacturing and distribution-centric customers cannot be understated.</p>
+            <h2>Admin Features</h2>
+            <p><strong><span style="text-decoration: underline;">Disable Email</span></strong> - Web Admins can now disable environment-wide email by unchecking a box. This feature is particularly useful for Dev and Testing environment as well as when cleaning up old process instances which tend to spam System Admins.</p>
+
+            <p><strong><span style="text-decoration: underline;">Session timeouts are now enforced</span></strong> - Session timeouts are now mandatory in an effort to increase security. This change won't matter much to SSO customers but may be a pain to frequent Appian end-users.</p>
+            <h2>Designer Experience</h2>
+            <p><strong><span style="text-decoration: underline;">Design View Navigator</span></strong> - SAIL can now be navigated in a tree-like structure. Will be useful for non-coding Designers for sure. I do wonder whether SAIL interfaces are simply too complex to configure straight from a point-and-click UI. What I've seen work best is for BAs or process designers to design the overall layout of the form, and a developer comes in behind them to add the dynamic behavior, validations, and other complex behavior like grids.</p>
+            <p><strong><span style="text-decoration: underline;">Expression editor auto-suggests fields for CDTs</span> </strong>- Most IDEs and text editors include this feature, and as a horrendous speller, I'm incredibly glad Appian does too.</p>
+
+            <p><strong><span style="text-decoration: underline;">Test Cases for expression rules</span></strong> - If I'm asked what Appian's biggest limitations are, automated testing is usually at the top of the list. The product team has long promised to make aggressive inroads on this front, and expression rules test cases are the first step. Test cases can be defined so that other developers can quickly test your rules without previous context, and test cases can be set to run on application import. Pretty cool overall, and I can't wait to see what testing features are next.</p>
+
+            <p><strong><span style="text-decoration: underline;">Edit Objects Security in bulk</span></strong> - Love it. For anyone rapidly deploying custom applications to production, security checks can be a serious time-sink and potential vulnerability. The ability to edit object security in bulk resolves this important issue.</p>
+
+            <p><strong><span style="text-decoration: underline;">Portal Reports renamed Process Reports</span></strong> - Appian continues migrating away from the legacy portal interface, and reports are the next move. "Process Reports" makes sense as a name, just note that "Task Reports" are now included in these Process Reports.</p>
+
+            <h2>Deprecated Features</h2>
+            <p>I'm a huge proponent of Appian's continued effort to de-clutter the product and deprecate old or unused functionality. 7.11 aggressively continues this trend, and I'm all for it.</p>
+
+            <p><strong><span style="text-decoration: underline;">Deprecating Communities</span></strong> - Communities and Knowledge Centers have long served similar purposes: provide a high-level group of an application's documents. Looks like just Knowledge Center will be used going forward.</p>
+
+            <p><strong><span style="text-decoration: underline;">Discussion forums</span></strong> - As someone who began working on Appian 6.6, I've personally never used a Discussion forum in a production application. <em>Snip snip.</em></p>
+
+            <p><strong><span style="text-decoration: underline;">Departments &amp; Teams</span></strong> - Similar to Communities, Departments and Teams provided similar but less flexible functionality as Custom Groups. Glad to see Appian continuing to remove the unnecessary clutter.</p>
+
+            <p>A full list of updates can be found in the <a href="https://forum.appian.com/suite/help/7.11/Appian_Release_Notes.html" target="_blank">release notes</a>. Send all questions and comments to <a href="https://twitter.com/corbpage" target="_blank">@corbpage</a>! I’d love to discuss what you think of the release!</p>
+
+            <p>I'll be back for Appian 7.12. See you then!</p>
+
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="container-fluid" id="section6">
-      <ul class="row list-unstyled">
-        <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
-          <h3 class="text-center">Feel free to reach out!</h3>
-        </li>
-        <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
-          <a href="#" data-toggle="modal" data-target="#myModal" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Contact Us</a>
-        </li>
-      </ul>
-    </section>
+  <section class="container-fluid" id="section6">
+    <ul class="row list-unstyled">
+      <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
+        <h3 class="text-center">Feel free to reach out!</h3>
+      </li>
+      <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
+        <a href="#" data-toggle="modal" data-target="#myModal" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Contact Us</a>
+      </li>
+    </ul>
+  </section>
 
-    <footer id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-3 column">
-          </div>
-          <div class="col-xs-6 col-md-3 column">
-            <h4>Information</h4>
-            <ul class="nav">
-              <li><a href="#section1">Home</a></li>
-              <li><a href="#section2">Services</a></li>
-            </ul>
-          </div>
-          <div class="col-xs-6 col-md-3 column">
-            <h4>Contact Us</h4>
-            <ul class="nav">
-              <li><a href="#" data-toggle="modal" data-target="#myModal">Email</a></li>
-              <li><a href='https://www.twitter.com/home/?status=AboutNavLabs@corbpage' target="_blank">Twitter</a></li>
-            </ul>
-          </div>
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-3 column">
         </div>
-        <p class="text-right">©2015</p>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Information</h4>
+          <ul class="nav">
+            <li><a href="../index.html#section1">Home</a></li>
+            <li><a href="../index.html#section2">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Contact Us</h4>
+          <ul class="nav">
+            <li><a href="#" data-toggle="modal" data-target="#myModal">Email</a></li>
+            <li><a href='https://www.twitter.com/home/?status=AboutNavLabs@corbpage' target="_blank">Twitter</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
+      <p class="text-right">©2015</p>
+    </div>
+  </footer>
 
-    <div class="scroll-up">
-     <a href="#"><i class="fa fa-angle-up"></i></a>
-   </div>
+  <div class="scroll-up">
+   <a href="#"><i class="fa fa-angle-up"></i></a>
+ </div>
 
-   <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h2 class="text-center">Contact Us</h2>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-xs-12">
-              <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
-            </div>
+ <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h2 class="text-center">Contact Us</h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
           </div>
-          <br>
-          <div class="row">
-            <div class="col-xs-12">
-              <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12">
+            <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--scripts loaded here-->
-  <script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
-  <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-  <script src="../lib/wow/js/wow.min.js"></script>
-  <script src="../lib/DRBmOoChfM/js/scripts.js"></script>
-  <script src="../assets/js/app.js"></script>
+</div>
+<!--scripts loaded here-->
+<script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
+<script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../lib/wow/js/wow.min.js"></script>
+<script src="../lib/DRBmOoChfM/js/scripts.js"></script>
+<script src="../assets/js/app.js"></script>
 </body>
 </html>

@@ -6,3 +6,13 @@
 	font-size: 18px;
 	color: #444;
 }
+
+.blog-content a {
+	padding: 3px;
+	color: #f44d3c;
+	text-decoration: none;
+}
+
+.blog-content a:hover {
+	color: #999;
+}

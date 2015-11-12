@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Navigator Labs | Appian 7.8 Review</title>
+  <meta name="description" content="Appian technical consulting services."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png"/>
+
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../lib/animate/css/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../lib/DRBmOoChfM/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body >
+
+  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-danger" href="../index.html">Navigator Labs</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-collapsible">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="../index.html#section1">Home</a></li>
+          <li><a href="../index.html#section2">Services</a></li>
+          <li><a href="../index.html#section3">Clients</a></li>
+          <li><a href="../index.html#section4">Community</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
+          <li>&nbsp;</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Changes needed -->
+  <!-- <title> -->
+  <!-- <h1> -->
+  <!-- <p> -->
+
+  <section class="container-fluid" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 column">
+        </div>
+        <div class="col-sm-11 col-md-8 column">
+          <h1>Appian 7.8 Review</h1>
+          <h4>Corbin Page</h4>
+          <p>Jan. 12, 2015</p>
+          <div class="blog-content">
+
+            <p>I’ve been using <a href="http://www.appian.com/" target="_blank">Appian’s BPM suite</a> for several years now and have seen the product evolve quite a bit over time. Appian generally releases a new version every quarter, and the short release cycle has become even more important since they went “all in” on the Tempo design in Appian 7.0. <a href="https://forum.appian.com/suite/tempo/records/type/software/item/iwBWsQdLlzKy55h8y8zLE8XpcdtAxIKkLhgmJS2YJXsLUB41BNKrOW9zzTRRg/view/summary" target="_blank">Version 7.8</a> was released on December 22nd, 2014 and has a number of features I’m excited about.</p>
+            <h3>Configurable User Start Pages</h3>
+            <p>I’ve heard this feature requested quite often ever since the “5 Tabs” Tempo interface was introduced in 7.2. Now users logging into Appian can be automatically redirected to the specific Task List, Record(s), or Report they use most. So your Support Team will immediately see their open tickets, and your executive sponsor will immediately see her high-level dashboard without needing to navigate to it. The start pages are controlled through the Administration Console and are based off Group membership, providing a simple mechanism for managing different subsets of users.</p>
+            <p>While I know users will absolutely love this new feature, I can’t help but wonder if configurable start pages will degrade the value of the Tempo Feed. The Feed already faces strong headwinds from 1) older users not comfortable with a “Twitter-like” feed and 2) process designers struggling to strike the right balance between over-posting and under-posting.</p>
+            <p>In my experience, I have seen few companies wholeheartedly adopt and routinely utilize the Feed. It’s silverlining, however, was that users *had* to view the Feed on initial login, which allowed users to scan recent activity in a more passive manner than email notifications. My guess is that most companies will switch out the Feed as the default start page and opt to display more data-centric views like a Record or Report.</p>
+            <h3>Maturing Following/Followers Model</h3>
+            <p>Whether configurable start pages ends up demoting the Feed remains to be seen, but Appian did add a couple of new features to continue maturing the followers/followees model.</p>
+            <p>‘Follow Records’ functionality was added as both a Smart Service and as a button that now appears on every single Record Dashboard. Following a record means that you’ll see any post where that specific record is tagged (unless specifically prohibited). I think the Smart Service will help designers keep relevant stakeholders (Account Owners, etc.) updated in an automated manner, but I think the ‘Follow’ button will confuse users into thinking they need to follow every single record. I wish this feature was configurable at the Record-level.</p>
+            <p>Additionally, the ‘Add Followers’ Smart Service has been renamed to ‘Follow Users Smart Service’ for consistency and is more forgiving when attempting to follow a secure user.</p>
+            <h3>Updated Interface Designer</h3>
+            <p>The 7.8 release also delivered the largest improvement to the SAIL Interface Designer since its introduction in 7.5. The ‘point and click’ UI design is back!</p>
+            <p>Appian’s legacy forms designer had a pretty robust ‘point and click’, WYSIWYG editor, but SAIL forms, so far, have always required coding to create. I personally really enjoy writing SAIL but understand that 1) business analysts (and less technical process designers) are intimidated by writing “code” and 2) developers don’t love learning a proprietary front-end language before they can start building their first UIs.</p>
+            <p>Enter the <a href="https://forum.appian.com/suite/help/7.8/Interface_Designer.html#Design_View">Design View</a>.</p>
+            <p>The Design View was introduced in 7.8 to bring back the ‘point and click’ model for creating forms, records, and reports. Click to insert a section, a couple text fields, some checkboxes, etc. and you’ll see the live view update in real time. Even better, while you’re modifying a component in the Design View, the interface will highlight that section to help you keep track of your modifications. And for power users, you can easily toggle back and forth between the Expression View that contains the editable SAIL code (in all its glory).</p>
+            <p>I’ve always compared the Interface Designer to a “lite” version of Developer Tools in Chrome and Firebug for Firefox. Now those tools are more robust of course (meant for all-out front-end development), but the Interface Designer needs to fulfill the same role for Appian’s streamlined interface. This first version of the Design View looks robust enough to handle most simple-to-medium complexity interfaces, but I’d guess it’s easier to flip to the Expression View for using advanced expressions like applyComponent() and servlet plugins.</p>
+            <p>That said, I think the Design View absolutely gets Business Analysts back to being comfortable building Appian UIs and making tweaks. And that’s a big step.</p>
+            <h3>Best of the Rest</h3>
+            <ul>
+              <li><strong>Query Process Analytics</strong>
+                <ul>
+                  <li>Would be a bigger deal if the <a href="https://forum.appian.com/suite/tempo/records/type/components/item/i8BWsQdLlzKy55h8z8zJ0sPqpDWFrba_bxb1lcYHs5SKFyBZTLc_SjsoHud0SOfWg/view/summary">‘Portal to SAIL’ plugin</a> did not exist. Nice to see Appian supporting this functionality OOTB though.</li>
+                </ul>
+              </li>
+              <li><strong>Paragraph fields in Grid Layouts</strong>
+                <ul>
+                  <li>Grids are frequently used to edit lists of child CDTs on forms, and regular text fields never provide enough information for editing longer fields like descriptions or comments. So instead, the common design pattern was to select a row of the grid and edit it in a dynamically appearing section below the grid.</li>
+                  <li>Supporting the paragraph field in Grid Layouts introduces a new, more “Excel-like” option for building out this feature.</li>
+                </ul>
+              </li>
+              <li><strong>Mobile</strong>
+                <ul>
+                  <li>All mobile links (including task links in email notifications) open up in the iOS or Android app, instead of the website in your default browser.</li>
+                  <li>Mobile offline connectivity notification was added to iOS. Android coming soon.</li>
+                </ul>
+              </li>
+              <li><strong>Process Model constants</strong>
+                <ul>
+                  <li>Replaces Process Model UUID as the best way to reference a process model in an expression.</li>
+                </ul>
+              </li>
+              <li><strong>Site Access Administration Page</strong>
+                <ul>
+                  <li>More awesome functionality added to the <a href="https://forum.appian.com/suite/help/7.8/Appian_Administration_Console.html" target="_blank">Administration Console</a>.</li>
+                  <li>If you use Appian for authentication, you can now specify minimum password strength, account locking, and several other features.</li>
+                </ul>
+              </li>
+              <li><strong>Concurrent Sessions</strong>
+                <ul>
+                  <li>The maximum number of concurrent sessions per account can now be set (but turned off by default).</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>So..Should I Upgrade?</h3>
+            <p>If you’re running Appian on the cloud, you’ll be prompted to upgrade no matter what. So this section isn’t for you. If you’re running Appian on-premise, Configurable User Start Pages might be important enough to justify an upgrade to your Business Sponsor. Or perhaps the new ‘point and click’ Interface Designer would significantly help your new process designers get ramped up on the product. However, for clients unwilling to upgrade every single quarter, I’d suggest waiting until the next release (usually in April) since the pre-<a href="http://appianworld.com/" target="_blank">Appian World</a> release is always feature-packed.</p>
+            <p>Hope you enjoyed my little rundown of Appian 7.8! Send all questions, comments, and critiques to <a href="https://twitter.com/corbin_page" target="_blank">@corbpage</a>! I’d love to discuss!</p>
+            <p>Until 7.9!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid" id="section6">
+    <ul class="row list-unstyled">
+      <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
+        <h3 class="text-center">Feel free to reach out!</h3>
+      </li>
+      <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
+        <a href="#" data-toggle="modal" data-target="#myModal" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Contact Us</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-3 column">
+        </div>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Information</h4>
+          <ul class="nav">
+            <li><a href="../index.html#section1">Home</a></li>
+            <li><a href="../index.html#section2">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Contact Us</h4>
+          <ul class="nav">
+            <li><a href="#" data-toggle="modal" data-target="#myModal">Email</a></li>
+            <li><a href='https://www.twitter.com/home/?status=AboutNavLabs@corbpage' target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-right">©2015</p>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+   <a href="#"><i class="fa fa-angle-up"></i></a>
+ </div>
+
+ <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h2 class="text-center">Contact Us</h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12">
+            <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--scripts loaded here-->
+<script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
+<script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../lib/wow/js/wow.min.js"></script>
+<script src="../lib/DRBmOoChfM/js/scripts.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

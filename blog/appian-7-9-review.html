@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Navigator Labs | Appian 7.9 Review</title>
+  <meta name="description" content="Appian technical consulting services."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png"/>
+
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../lib/animate/css/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../lib/DRBmOoChfM/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body >
+
+  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-danger" href="../index.html">Navigator Labs</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-collapsible">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="../index.html#section1">Home</a></li>
+          <li><a href="../index.html#section2">Services</a></li>
+          <li><a href="../index.html#section3">Clients</a></li>
+          <li><a href="../index.html#section4">Community</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
+          <li>&nbsp;</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Changes needed -->
+  <!-- <title> -->
+  <!-- <h1> -->
+  <!-- <p> -->
+
+  <section class="container-fluid" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 column">
+        </div>
+        <div class="col-sm-11 col-md-8 column">
+          <h1>Appian 7.9 Review</h1>
+          <h4>Corbin Page</h4>
+          <p>May 17, 2015</p>
+          <div class="blog-content">
+          
+            <p>Good seeing everyone at Appian World!</p>
+            <p>Every year, the Appian World software release is always packed with exciting new features and gives strong hints at where the overall product is headed. This year was no exception: a TON of new functionality was released including major improvements to Designer environment and a more customizable end-user experience.</p>
+            <p>Without further ado, here are the 9 best features from the <a href="https://forum.appian.com/suite/help/7.9/Appian_Release_Notes.html" target="_blank">Appian 7.9 release</a>!</p>
+            <h2>Designer Improvements</h2>
+            <h3>1) New Application Designer</h3>
+            <p>Appian continues to overhaul the Designer experience focusing on the new Application Designer in this release, continuing the same ‘look and feel’ as the SAIL Interface Designer. The Application Designer expands the functionality of the old Applications tab (now removed) and acts as a more useful “object hub” for searching, sorting, and filtering every type of Appian object. It’s also the home of other new useful features like ‘Precedents and Dependents’ and the ‘Security Summary View’. Import/Export received a major performance boost, and now you don’t have to re-select an Application zip file between inspecting and importing (woohoo!). One critique of the new App Designer is that it relies too heavily on text buttons rather than icons or more menus (I counted 10+ text buttons in the header row at times). It’s simply cluttered and loses the advantage of icons, which become instantly recognizable over time and are less dependent of Appian-specific terminology.</p>
+            <h3>2) Dependents and Precedents</h3>
+            <p>Impact Analysis has now become Dependents and Precedents, got an ultra-fast performance boost, and can be used on any Appian object, not just CDTs. This might be the most impactful new feature for managing changes to large Appian applications and represents the first big win from Appian incorporating Elastic Search into the product.</p>
+            <h3>3) Security Summary View</h3>
+            <p>Arguably the most underrated feature of the 7.9 release, the Security Summary View eliminates a onerous but <em>essential</em> task from prior releases. Previously, security could only be viewed and edited one object at a time, so developers would have to manually check hundreds of objects to eliminate security vulnerabilities. That time-consuming task has been replaced with an aggregated summary view of all objects in an application. The view allows for easy checking of all objects and links to correct any incorrect permissions. Huge improvement!</p>
+            <h3>4) New Data Type Designer</h3>
+            <p>The new Data Type Designer received the slick makeover of the new Designer environment and added a couple features like being able to specify primary keys and auto-generated annotations without editing an XSD file. This feature is <em>long</em> overdue since almost all CDTs need a unique identifier. I expect Data Type Designer functionality to continue to expand in the coming releases and possibly include mapping database columns through the UI or even generating a CDT from a database table or View.</p>
+            <h3>5) New Expression Rule Designer</h3>
+            <p>Continuing the trend, the legacy ‘Expression Editor’ was redesigned and morphed into the ‘Expression Rule Designer’ (in the /design environment). Autocomplete is completely supported, and expression documentation appears in a sub-window all in one place. One critique of this setup is that autocomplete doesn’t help when a user doesn’t no how an expression name starts (which is the case for new designers). The legacy expression editor at least had categories and drilldowns to help find the function or rule needed. I’d recommend bookmarking Appian’s much-improved <a href="https://forum.appian.com/suite/help/7.9/Appian_Functions.html" target="_blank">function documentation on Forum</a> for help identifying with function to use.</p>
+            <h3>6) Interface Designer Improvements</h3>
+            <p>The Interface Designer continues to get better and better with every release. Now, 7.9 introduces new features like rule inputs that can be type-controlled and test rule inputs that use dynamic expressions. Type-controlling rule inputs should help resolve errors for inexperienced designers and the new test rule inputs should make building out interfaces much easier. In addition, common IDE shortcuts like find, replace, and autoformatting have been added as well.</p>
+            <h2>Customizable End-User Experiences</h2>
+            <h3>7) Sites</h3>
+            <p>Sites, in its first iteration, provides a simple, distraction-free custom task report for heads down workers to churn through their work. A Site hides the Feed, Records, and all of the “Five Tabs” view, so users can focus on what is most import, their work. This feature shows that Appian is willing to customize the user experience a bit when it makes sense, and I’d expect that Sites will evolve to include much more that task reports in future releases so that a report or record dashboard that could function as an independent Site as well.</p>
+            <h3>8) Web API</h3>
+            <p>Web APIs are my favorite new feature of Appian 7.9 because it provides other systems easy RESTful access to business data (or Appian data, or other systems’ data) without having to build a separate service on top of your relational data. Forget using another service like <a href="http://www.odata.org/" target="_blank">OData</a> or <a href="http://www.slashdb.com/" target="_blank">SlashDB</a> to access your business data; Appian handles it for you while taking care of authentication, authorization, data structure (JSON, XML, CSV), versioning, logging, and more. Developers can configure the endpoints anyway they wish using the familiar SAIL language, and Appian provides some helpful templates that makes the process really easy. So absolutely any mobile or web app can be built on top of Appian easily, using the APIs that a developer configures and maintains through the Designer interface. Sample use cases could include: task lists embedded into Outlook, custom-built mobile apps, embed Record data into your company’s portal site, query process data through Slack, and many many more!</p>
+            <h3>9) Best of the Rest:</h3>
+            <ul>
+              <li><strong>Offline Mobile Action</strong> – Shows Appian’s continued commitment to mobile-first apps, which will likely continue growing quickly.</li>
+              <li><strong>Feed Improvements</strong> – Removed the ‘Not Available’ tag, allowed users to delete their posts, and auto-detects if attachments were suggested.</li>
+              <li><strong>Organization Chart SAIL Component</strong> – Nice design if users have uploaded profile pictures.</li>
+              <li><strong>HTTP File Upload and HTTP Download Smart Services</strong> – Replaces some common plug-ins that had led to performance problems.</li>
+              <li><strong>Rule Performance Log</strong> – Essentially the Appian Labs program now built into the product. Surfaces “red flag” rules to improve performance.</li>
+              <li><strong>Design Error Log</strong> – Super useful for troubleshooting tricky SAIL issues.</li>
+            </ul>
+            <p>Hope you enjoyed my favorite features of Appian 7.9! A full list of updates can be found in the <a href="https://forum.appian.com/suite/help/7.9/Appian_Release_Notes.html">release notes</a>. Send all questions and comments to <a href="https://twitter.com/corbpage" target="_blank">@corbpage</a>! I’d love to discuss what you think of the release!</p>
+            <p>Until 7.10!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid" id="section6">
+    <ul class="row list-unstyled">
+      <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
+        <h3 class="text-center">Feel free to reach out!</h3>
+      </li>
+      <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
+        <a href="#" data-toggle="modal" data-target="#myModal" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Contact Us</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-3 column">
+        </div>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Information</h4>
+          <ul class="nav">
+            <li><a href="../index.html#section1">Home</a></li>
+            <li><a href="../index.html#section2">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3 column">
+          <h4>Contact Us</h4>
+          <ul class="nav">
+            <li><a href="#" data-toggle="modal" data-target="#myModal">Email</a></li>
+            <li><a href='https://www.twitter.com/home/?status=AboutNavLabs@corbpage' target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-right">©2015</p>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+   <a href="#"><i class="fa fa-angle-up"></i></a>
+ </div>
+
+ <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h2 class="text-center">Contact Us</h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12">
+            <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--scripts loaded here-->
+<script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
+<script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../lib/wow/js/wow.min.js"></script>
+<script src="../lib/DRBmOoChfM/js/scripts.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
