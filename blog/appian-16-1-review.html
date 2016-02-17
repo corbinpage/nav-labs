@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Navigator Labs | Appian 16.1 Review</title>
+  <meta name="description" content="Appian technical consulting services."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png"/>
+
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../lib/animate/css/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../lib/DRBmOoChfM/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body >
+
+  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-danger" href="../index.html">Navigator Labs</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-collapsible">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="../index.html#section1">Home</a></li>
+          <li><a href="../index.html#section2">Services</a></li>
+          <li><a href="../index.html#section3">Clients</a></li>
+          <li><a href="../index.html#section4">Community</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
+          <li>&nbsp;</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Changes needed -->
+  <!-- <title> -->
+  <!-- <h1> -->
+  <!-- <p> -->
+
+  <section class="container-fluid" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 column">
+        </div>
+        <div class="col-sm-11 col-md-8 column">
+          <h1>Appian 16.1 Review</h1>
+          <h4>Corbin Page</h4>
+          <p>Feb 10, 2016</p>
+          <div class="blog-content">
+
+
+            <div class="entry-content">
+              <p><a href="https://forum.appian.com/suite/help/16.1/Appian_Release_Notes.html" target="_blank">Appian 16.1</a> was released last month and jumped ahead a couple releases! No, that would be a lot of updates! Instead, Appian began to number their releases by year. January releases usually include plenty of incremental improvements but are smaller overall compared to the normally HUGE pre-Appian World release in April/May. So here are some of the coolest new features!</p>
+              <h2>End-User Features</h2>
+              <p><strong><span style="text-decoration: underline;">Grid-Style Record Lists</span></strong> – Long overdue, you can now configure the default Record list view as a grid instead of a feed-looking structure. Most users prefer the grid view, especially for large sets of records, and Reports were frequently used to display all records in a grid view with associated filters. These reports will probably still be used, but the record list grid is a welcome alternative.</p>
+              <p><strong><span style="text-decoration: underline;">Multi-Page Sites</span></strong> – I admittedly haven’t gotten a chance to use Sites (much less multi-page Sites) but they look great. There are always certain stakeholders (data entry personnel, customers, vendors, etc.) that only need a slim view of Appian functionality, and Sites fits that use case perfectly. </p>
+              <p><strong><span style="text-decoration: underline;">User and Group Browser Components</span></strong> – Provides a great visual component for navigating groups and selecting one or more users/groups. I think these components will slowly replace pickers for the optimal method for selecting users/groups since they’re more visual than the pickers’ autocomplete functionality. </p>
+              <h2>Designer Features</h2>
+              <p><strong><span style="text-decoration: underline;">Assertions for Expression Rule Test Cases</span></strong> – Assertions allow a designer to specify the conditions that cause a test case to pass. They seem like the next step in Appian building out their testing capabilities, which I love to see. The testing features are becoming more and more robust!</p>
+              <p><strong><span style="text-decoration: underline;">Default Filter Option</span></strong> – Designers can now specify a default filter in their Record list view (like status=active for instance). Despite being a small change, designers used to have to create multiple different records for showing subsets of typically used data, like ‘Active Requests’ and a separate record for ‘Completed Requests’. Now the default filter can be used.</p>
+              <p><strong><span style="text-decoration: underline;">Format Expression Button in Expression Rule Designer</span></strong> – The expression editor now has a button for formatting your beefy SAIL expressions! Sharp designers probably already knew about the keyboard shortcut (Ctrl + Shift + F), but the button makes formatting your expressions that much more obvious. Always a good thing.</p>
+              <h2>Deployment Features</h2>
+              <p><strong><span style="text-decoration: underline;">Search by UUID</span></strong> – The Designer environment now allows search by UUID, which is the best news your Deployment Lead has heard in a while! Appian’s import errors have always been almost comically vague, only giving a UUID for missing dependent objects. Previously there were some plugins that could be used to track down the missing objects by UUID but searching by UUID in the designer environment is a welcome improvement.</p>
+              <p><strong><span style="text-decoration: underline;">Inspect Data Stores improvements</span></strong> – Now if Data Stores can be imported but not published, it comes up as a warning instead of an error in the Import log. This error was always confusing to new Appian users, and I’m glad it’s now a warning.</p>
+              <p><strong><span style="text-decoration: underline;">Existing Object Rolemaps are Overwritten on Import</span></strong> – This long awaited change is another win for faster releases. Previously, the security of imported objects was merged with the privileges in the higher environment causing some confusing results. After import, the security of each object would then need to be inspected and changed. Now, the security roles of the lower environment override the higher environment, eliminating the extra manual steps. This is another improvement for object security management that’s been getting a lot attention in recent releases (thankfully).</p>
+              <h2>Admin Features</h2>
+              <p><strong><span style="text-decoration: underline;">Primary Data Source Terminology Change</span></strong> – Rather than “primary” and “secondary” data sources, the two standard databases are called “Appian” and “business” data sources. This terminology change is more informative and useful for sure but will require some extra steps during the upgrade process.</p>
+              <p><strong><span style="text-decoration: underline;">Data Source Configuration in /admin</span></strong> – Data sources can now be configured in the Admin Console instead of via configuration changes on the server! No app server restart required! Another huge time saver for administrators.</p>
+              <p>Those were my big takeaways from Appian 16.1, but there were plenty of other changes that can be found in the <a href="https://forum.appian.com/suite/help/16.1/Appian_Release_Notes.html" target="_blank">release notes</a>. </p>
+              <p><strong><span style="text-decoration: underline;">Predictions for Appian 16.2:</span></strong> HUGE release before Appian World in late April. The /design environment becomes the default development environment, and the old designer UI is only available for process modeling and some obscure configurations. Large testing functionality announced as well.</p>
+              <p>Until then,<br>
+                -Corbin</p>
+              </div><!-- .entry-content -->
+
+              <!-- ZZZZZZZZZ -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid" id="section6">
+      <ul class="row list-unstyled">
+        <li class="col-md-6 col-md-offset-1 col-xs-10 col-xs-offset-1">
+          <h3 class="text-center">Feel free to reach out!</h3>
+        </li>
+        <li class="col-md-3 col-md-offset-0 col-xs-10 col-xs-offset-1 text-center">
+          <a href="#" data-toggle="modal" data-target="#myModal" class="center-block btn btn-default btn-lg btn-huge lato animate slideInRight">Contact Us</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-3 column">
+          </div>
+          <div class="col-xs-6 col-md-3 column">
+            <h4>Information</h4>
+            <ul class="nav">
+              <li><a href="../index.html#section1">Home</a></li>
+              <li><a href="../index.html#section2">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3 column">
+            <h4>Contact Us</h4>
+            <ul class="nav">
+              <li><a href="#" data-toggle="modal" data-target="#myModal">Email</a></li>
+              <li><a href='https://www.twitter.com/home/?status=AboutNavLabs@corbpage' target="_blank">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-right">©2015</p>
+      </div>
+    </footer>
+
+    <div class="scroll-up">
+     <a href="#"><i class="fa fa-angle-up"></i></a>
+   </div>
+
+   <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">Contact Us</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12">
+              <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--scripts loaded here-->
+  <script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
+  <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="../lib/wow/js/wow.min.js"></script>
+  <script src="../lib/DRBmOoChfM/js/scripts.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-44648226-5', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

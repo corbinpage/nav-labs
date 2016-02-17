@@ -1,3 +1,3 @@
-# Nav Labs Static Site
+# NavLabs Static Site
 
-TBD
+Static website For NavLabs.

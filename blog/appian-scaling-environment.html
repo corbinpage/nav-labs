@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Navigator Labs | 9 Tips for Scaling your Appian Environment</title>
+  <meta name="description" content="Appian technical consulting services."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png"/>
+
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../lib/animate/css/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../lib/DRBmOoChfM/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body >
+
+  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-danger" href="../index.html">Navigator Labs</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-collapsible">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="../index.html#section1">Home</a></li>
+          <li><a href="../index.html#section2">Services</a></li>
+          <li><a href="../index.html#section3">Clients</a></li>
+          <li><a href="../index.html#section4">Community</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
+          <li>&nbsp;</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Changes needed -->
+  <!-- <title> -->
+  <!-- <h1> -->
+  <!-- <p> -->
+
+  <section class="container-fluid" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 column">
+        </div>
+        <div class="col-sm-11 col-md-8 column">
+          <h1>9 Tips for Scaling your Appian Environment</h1>
+          <h4>Corbin Page</h4>
+          <p>Feb 16, 2016</p>
+          <div class="blog-content">
+
+            <p>These days, I mostly see Appian used as a platform for many different apps and workflows within their organization, rather than a monolithic single purpose system. Each client has a different combination of apps, processes, and data views that create a unique challenge in scaling their Appian program, but most clients are able to make their lives easier by following some or all of the tips below. Hopefully you can find them useful as well!</p>
+
+            <p>These tips are meant for developers and designers building their first 1-5 apps and can be used along with the recently released <a href="https://forum.appian.com/suite/help/16.1/playbook/">Appian Playbook</a> which provides an excellent high-level guide to building out an Appian program.</p>
+
+            <h3>Be strict about naming conventions</h3>
+            <p>It might sound obvious, but it’s important to call the same thing, the same thing. As your Appian program scales, multiple developers will put their own unique spin on variables names, rules, constants, etc. Keep this complexity tamed by following Appian’s <a href="https://forum.appian.com/suite/help/16.1/Standard_Object_Names.html">Standard Object Naming conventions</a> and enforces standard variable names via regular Code Reviews.</p>
+
+
+            <h3>Use APN objects across apps</h3>
+            <p>Appian’s <a href="https://forum.appian.com/suite/rest/a/content/latest/ioBWsQdLlzKy55h821pegJS_aao_bClfn6kaA2885s8CkmBit_JcaRqqZM/o">Common Object Application</a> contains frequently used rules and constants (APN_isBlank, APN_displayGroupOrUsername, etc.) that will save you time as you develop your process-specific rules, constants, and apps. In addition, I’d recommend creating your own “APN” objects for objects that span applications so you’re not creating the same objects over-and-over again (“APN_formatDollarAmount”, “APN Human Resources Group”).</p>
+
+            <h3>Make your apps environment-specific</h3>
+            <p>Create a simple “APN_ENVIRONMENT_INDICATOR” constant with values of “DEV”, “TEST”, and “PROD” in your Dev/Test/Prod environments. Then you can customize the behavior of your applications based on environment. For example:</p>
+            <ol>
+              <li>Preface email subjects in Dev/Test with “*TEST*”, so they’re not confused with real notifications from Production.</li>
+              <li>Show primary key IDs on Records in your Test environment to help report bugs via screenshots during testing.</li>
+              <li>Build environment-specific “backdoor” paths in your process models to speed up unit and integration testing.</li>
+            </ol>
+
+            <h3>Add a flagArray variable to all your Process Models and SAIL forms</h3>
+            <ol>
+              <p>Create a single text array variable to use throughout your application. Trust me.  Use constants to specify the particular flag at each index (APN_IS READ_ONLY_INDEX, etc.). Then you’ll be able to use the same flagArray everywhere in your application instead of passing multiple flags in and out of your SAIL forms and subprocesses. The flagArray is particularly useful when you have a mature, active app and need to control need to hide/show sections on SAIL forms without breaking in-flight processes.</p>
+            </ol>
+            <img src="../assets/img/flagArray.png" class="img-responsive" style="border: 1px solid black" alt="flagArray">
+
+            <h3>Use annotations and formatting in your Process Models</h3>
+            <ol>
+              <li>Appian is a GUI-based coding tool for building custom apps. Use the GUI to it’s full potential, and other developers will love you!</li>
+              <li>You’re already describing the process in a Visio-like workflow diagram, so go ahead and use color and formatting to specific tricky business and system logic for the next developer.
+                <ol>
+                  <li>If you’re editing a commonly used process model, use a big red annotation to alert other developers not to touch the process without discussing with you.</li>
+                  <li>Use a separate color (like blue or green) when making in-flight changes to a process instance, so it clearly shows where the alteration was made.</li>
+                  <li>Explain difficult functionality or mark where a path may be deprecated in the future.</li>
+                </ol>
+              </li>
+            </ol>
+            <img src="../assets/img/annotation.png" class="img-responsive" style="border: 1px solid black" alt="processModel">
+
+            <h3>Use the Community!</h3>
+            <p>Use plug-n-play apps, utilities, and plug-ins from the <a href="http://www.appian.com/appmarket/">App Market</a> and Shared Components. No need to reinvent the wheel! Some plugins and utilities should be deployed at the beginning of any project because they’re going to make your life, and your end-users’ lives, much better. Appian recommends several <a href="https://forum.appian.com/suite/help/16.1/playbook/Plugins_Applications_Recommendations.html">here</a>. In addition, check the App Market for boilerplate applications or just a good starting point. Some components, like my <a href="http://www.appian.com/appmarket/component/task-metric-utilities/">Task Metric Utilities</a>, can be deployed on top on *any* Appian application, no configuration necessary.</p>
+
+            <h3>Make your Emails pretty</h3>
+            <p>If your application routinely uses the ‘Send Email’ node, take 30 minutes out of your day and find a slick looking HTML template to use for all notifications. There are tons of free templates <a href="http://lmgtfy.com/?q=free+html+email+template">available online</a>. It’s a simple step that will make notifications look a whole lot better than sending simple text.</p>
+
+            <h3>Store metadata for Documents</h3>
+            <p>If you’re using Appian for Document Management rather than integrating an external system, make sure to save document metadata (name, type, security level) in your database. Appian’s document management system can hold some of this information, but you’ll have more control and flexibility by storing metadata in a database instead.</p>
+
+            <h3>Right people for the Job</h3>
+            <p>Along with Appian skills, your team should have strong SQL skills and ideally some Java skills as well. SQL skills are imperative for creating performant database Views from summary reports and other display UIs. Java skills are important for plugin development and custom integrations if necessary. Lastly, make sure your team stays as close as possible to your end-users. The closer that the Appian application mimics the real-life process in nomenclature, functionality, and general utility, the better.</p>
+
+            <p>Hope that helps and <a href="mailto:corbin@nav-labs.com">feel free to reach out</a> if you found the post helpful!</p>
+
+            <p>Thanks,</p>
+
+            <p>Corbin</p>
+
+            <!-- ZZZZZZZZZ -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="row">
+      <div class="container">
+        <p class="text-right">©2015</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+   <a href="#"><i class="fa fa-angle-up"></i></a>
+ </div>
+
+ <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h2 class="text-center">Contact Us</h2>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 class="text-center">Shoot us an email at <a href="mailto:info@nav-labs.com">info@nav-labs.com</a> or use the form below:</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12">
+            <iframe src="https://docs.google.com/forms/d/1jl4xbk7NB05r0qGoQLDVuIpJXalIkIvXr6uZ0hhN3HU/viewform?embedded=true" width="580" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--scripts loaded here-->
+<script src="../lib/jquery/js/jquery-2.1.4.min.js"></script>
+<script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../lib/wow/js/wow.min.js"></script>
+<script src="../lib/DRBmOoChfM/js/scripts.js"></script>
+<script src="../assets/js/app.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44648226-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
