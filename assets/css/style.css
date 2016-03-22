@@ -16,3 +16,47 @@
 .blog-content a:hover {
 	color: #999;
 }
+
+#home, #clients {
+  background-color: rgba(0,0,0,0.7);
+  color:#fff;
+  font-family: 'Bitter', serif;
+}
+
+#blog {
+  background-color: #f6f6f6;
+  color:#444;
+}
+
+#services {
+  background-color: #fff;
+}
+
+#clients {
+  background-color: rgba(0,0,0,0.9);
+}
+
+#welcome {
+  background-color: #fff;
+}
+
+#drawing {
+  min-height: 1500px;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
+#path {
+  stroke-dasharray: 100;
+  animation: dash 5s linear;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
