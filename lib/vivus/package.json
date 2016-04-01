@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "vivus",
+      "/Users/corbinpage/zdev/nav-labs"
+    ]
+  ],
+  "_from": "vivus@latest",
+  "_id": "vivus@0.3.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/vivus",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "email": "duluc.maxime@gmail.com",
+    "name": "maxwellito"
+  },
+  "_npmVersion": "3.4.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "vivus",
+    "raw": "vivus",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/vivus/-/vivus-0.3.0.tgz",
+  "_shasum": "52e5a8069c8a3e79fac3d65ecd8c96c217e98e6e",
+  "_shrinkwrap": null,
+  "_spec": "vivus",
+  "_where": "/Users/corbinpage/zdev/nav-labs",
+  "author": {
+    "name": "maxwellito"
+  },
+  "bugs": {
+    "url": "https://github.com/maxwellito/vivus/issues"
+  },
+  "dependencies": {},
+  "description": "JavaScript library to make drawing animation on SVG",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-concat": "^2.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-imports": "0.0.2",
+    "gulp-jshint": "^1.6.3",
+    "gulp-karma": "0.0.4",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^2.2.19",
+    "karma": "^0.12.17",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.6",
+    "karma-jasmine": "~0.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "52e5a8069c8a3e79fac3d65ecd8c96c217e98e6e",
+    "tarball": "http://registry.npmjs.org/vivus/-/vivus-0.3.0.tgz"
+  },
+  "engine": {
+    "node": ">=0.10.22"
+  },
+  "gitHead": "1909b4deed374d8f430beb7868065eaddea9df28",
+  "homepage": "https://github.com/maxwellito/vivus",
+  "license": "MIT",
+  "main": "dist/vivus.js",
+  "maintainers": [
+    {
+      "name": "maxwellito",
+      "email": "duluc.maxime@gmail.com"
+    }
+  ],
+  "name": "vivus",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxwellito/vivus.git"
+  },
+  "scripts": {
+    "serve": "python -m SimpleHTTPServer 8844",
+    "test": "karma start test/karma.conf.js"
+  },
+  "spm": {
+    "main": "dist/vivus.js"
+  },
+  "version": "0.3.0"
+}
