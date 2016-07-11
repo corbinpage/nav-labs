@@ -17,7 +17,7 @@
 	color: #999;
 }
 
-#home, #clients {
+#home, #clients, #hiring {
   background-color: rgba(0,0,0,0.7);
   color:#fff;
   font-family: 'Bitter', serif;
@@ -53,6 +53,28 @@ svg {
 #path {
   stroke-dasharray: 100;
   animation: dash 5s linear;
+}
+
+footer .nav>li a {
+    padding: 3px;
+    color: #f44d3c;
+}
+
+footer .nav>li a:hover {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+#hiring a {
+    padding: 3px;
+    color: #f44d3c;
+}
+
+#hiring a:hover {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
 }
 
 @keyframes dash {

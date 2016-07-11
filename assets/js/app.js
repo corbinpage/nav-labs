@@ -3,7 +3,7 @@
   new WOW().init();
 
 
-  if (SVG.supported) {
+  // if (SVG.supported) {
 
     // var draw = SVG('drawing').size(300, 300);
     // var rect = draw.rect(100, 100).attr({ fill: '#f06' });
@@ -20,9 +20,9 @@
     //   , stroke: '#000'
     // })
 
-} else {
-  console.log('SVG not supported')
-}
+// } else {
+//   console.log('SVG not supported')
+// }
 
 // var current_frame, total_frames, path, length, handle, myobj;
 
@@ -85,12 +85,12 @@
 //   draw();
 // };
 
-var vivus = new Vivus('svg-drawing', {
-  type: "oneByOne",
-  duration: 1000
-  // file: "assets/img/process-diagram-simple.svg"
-});
-vivus.play();
+// var vivus = new Vivus('svg-drawing', {
+//   type: "oneByOne",
+//   duration: 1000
+//   // file: "assets/img/process-diagram-simple.svg"
+// });
+// vivus.play();
 
 
 })();
